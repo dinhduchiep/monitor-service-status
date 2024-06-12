@@ -18,14 +18,14 @@ fi
 if ! systemctl is-active --quiet nginx.service; then
   # If not running, restart and send message to Telegram
     sudo service nginx restart
-    MESSAGE="Nginx Service was down. Restarting now"
+    MESSAGE="NGINX Service was down. Restarting now"
     curl -s -X POST https://api.telegram.org/bot$BOT_API_KEY/sendMessage -d chat_id=$CHAT_ID -d text="$MESSAGE"
 fi
 
 # Check if PHP service is running (Thay bằng dịch vụ PHP trên VPS của bạn)
-if ! systemctl is-active --quiet php7.4-fpm.service; then
+if ! systemctl is-active --quiet php8.1-fpm.service; then
   # If not running, restart and send message to Telegram
-    sudo service php7.4-fpm restart
+    sudo service php8.1-fpm restart
     MESSAGE="PHP Service was down. Restarting now"
     curl -s -X POST https://api.telegram.org/bot$BOT_API_KEY/sendMessage -d chat_id=$CHAT_ID -d text="$MESSAGE"
 fi
