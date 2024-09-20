@@ -34,7 +34,7 @@ fi
 if ! systemctl is-active --quiet php8.2-fpm.service; then
   # If not running, restart and send message to Telegram
     sudo service php8.2-fpm restart
-    MESSAGE="PHP Service was down. Restarting now"
+    MESSAGE="PHP8.2 Service was down. Restarting now"
     curl -s -X POST https://api.telegram.org/bot$BOT_API_KEY/sendMessage -d chat_id=$CHAT_ID -d text="$MESSAGE"
 fi
 
