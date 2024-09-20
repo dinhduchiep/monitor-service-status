@@ -3,7 +3,7 @@ while true
 do
 
 # Set up Telegram bot API and chat ID
-BOT_API_KEY="7460907122:AAHhRVogyCEK_OnJA-UzOuGxOodbAw0Vtcg"
+BOT_API_KEY="7940887422:AAFGI5kjr38ad0ZP2Fksp6X_kZyBk-A5AAI"
 CHAT_ID="206948142"
 
 # Check if MySQL service is running  
